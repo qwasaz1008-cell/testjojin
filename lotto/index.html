@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ422XXJBM"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-ZJ422XXJBM');
+	</script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8240911790449728"
+		crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#f5f3ee">
+	<title>Lucky Six | 로또 번호 추첨</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			color-scheme: light;
+			--bg: #f5f3ee;
+			--paper: #fffdf8;
+			--ink: #20231f;
+			--muted: #777a71;
+			--line: #deddd5;
+			--soft: #ebe9e1;
+			--accent: #ed6b3e;
+			--accent-dark: #bf4525;
+			--accent-pale: #ffe3d5;
+			--shadow: 0 18px 50px rgba(51, 45, 35, .08);
+		}
+
+		[data-theme="dark"] {
+			color-scheme: dark;
+			--bg: #171916;
+			--paper: #20231f;
+			--ink: #f4f0e8;
+			--muted: #a3a69e;
+			--line: #393c36;
+			--soft: #2b2f29;
+			--accent: #ff8154;
+			--accent-dark: #ffb49a;
+			--accent-pale: #543226;
+			--shadow: 0 18px 50px rgba(0, 0, 0, .22);
+		}
+
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			min-width: 320px;
+			background: var(--bg);
+			color: var(--ink);
+			font-family: "Manrope", "Noto Sans KR", sans-serif;
+			transition: background .25s ease, color .25s ease;
+		}
+
+		body::before {
+			content: "";
+			position: fixed;
+			z-index: -1;
+			inset: 0;
+			opacity: .4;
+			pointer-events: none;
+			background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+			background-size: 44px 44px;
+			mask-image: linear-gradient(to bottom, black, transparent 65%);
+		}
+
+		.shell { width: min(100% - 40px, 1060px); margin: 0 auto; }
+		.topbar { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; }
+		.brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: -.04em; }
+		.brand-mark { display: grid; place-items: center; width: 35px; height: 35px; border-radius: 50%; background: var(--accent); color: #fff; font-family: "DM Mono", monospace; font-size: 14px; transform: rotate(-12deg); }
+		.brand span:last-child { font-size: 17px; }
+		.theme-toggle { display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px 8px 9px; color: var(--muted); background: var(--paper); font: 600 12px "Manrope", sans-serif; cursor: pointer; transition: border-color .2s, color .2s, transform .2s; }
+		.theme-toggle:hover { border-color: var(--accent); color: var(--ink); transform: translateY(-1px); }
+		.theme-icon { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--soft); font-size: 14px; }
+
+		.hero { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: end; padding: 56px 0 46px; }
+		.eyebrow { display: flex; align-items: center; gap: 10px; color: var(--accent-dark); font: 500 11px "DM Mono", monospace; letter-spacing: .1em; text-transform: uppercase; }
+		.eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
+		h1 { max-width: 560px; margin: 16px 0 20px; font-size: clamp(40px, 6vw, 74px); line-height: .98; letter-spacing: -.075em; }
+		.hero-copy { max-width: 415px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
+		.hero-note { justify-self: end; display: flex; gap: 13px; align-items: center; max-width: 295px; padding: 17px 18px; border-left: 2px solid var(--accent); color: var(--muted); font-size: 12px; line-height: 1.65; }
+		.hero-note strong { display: block; margin-bottom: 2px; color: var(--ink); font-size: 13px; }
+
+		.panel { overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--paper); box-shadow: var(--shadow); }
+		.panel-head { display: flex; align-items: center; justify-content: space-between; padding: 21px 25px; border-bottom: 1px solid var(--line); }
+		.panel-title { margin: 0; font-size: 16px; letter-spacing: -.03em; }
+		.panel-meta { color: var(--muted); font: 11px "DM Mono", monospace; }
+		.sets { padding: 8px 25px 12px; }
+		.lotto-row { display: grid; grid-template-columns: 34px 1fr auto; gap: 18px; align-items: center; min-height: 91px; border-bottom: 1px solid var(--line); }
+		.lotto-row:last-child { border-bottom: 0; }
+		.row-number { color: var(--muted); font: 12px "DM Mono", monospace; }
+		.balls { display: flex; flex-wrap: wrap; gap: 10px; }
+		.ball { display: grid; place-items: center; width: 40px; aspect-ratio: 1; border-radius: 50%; background: var(--soft); color: var(--ink); font: 600 14px "DM Mono", monospace; animation: pop .38s both; }
+		.ball:nth-child(1), .ball:nth-child(2) { background: var(--accent-pale); color: var(--accent-dark); }
+		.ball:nth-child(3), .ball:nth-child(4) { background: #e1eee9; color: #367265; }
+		[data-theme="dark"] .ball:nth-child(3), [data-theme="dark"] .ball:nth-child(4) { background: #263f39; color: #9cd7c5; }
+		.ball:nth-child(5), .ball:nth-child(6) { background: #e8e5f0; color: #625780; }
+		[data-theme="dark"] .ball:nth-child(5), [data-theme="dark"] .ball:nth-child(6) { background: #373246; color: #c7b9ef; }
+		.row-label { color: var(--muted); font-size: 11px; white-space: nowrap; }
+		.controls { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 23px 25px 25px; background: color-mix(in srgb, var(--soft) 38%, transparent); }
+		.controls-copy { color: var(--muted); font-size: 12px; }
+		.controls-copy strong { color: var(--ink); }
+		.draw-button { display: inline-flex; align-items: center; gap: 10px; border: 0; border-radius: 10px; padding: 14px 19px; background: var(--accent); color: #fff; font: 700 13px "Manrope", sans-serif; cursor: pointer; box-shadow: 0 8px 16px rgba(237, 107, 62, .22); transition: transform .2s, background .2s; }
+		.draw-button:hover { background: var(--accent-dark); transform: translateY(-2px); }
+		.draw-button:active { transform: translateY(0); }
+		.draw-button svg { width: 16px; height: 16px; }
+
+		.footer { display: flex; justify-content: space-between; padding: 24px 0 34px; color: var(--muted); font: 11px "DM Mono", monospace; }
+		.footer a { color: inherit; text-decoration: none; }
+		@keyframes pop { from { opacity: 0; transform: scale(.6) translateY(8px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+		@media (max-width: 720px) {
+			.shell { width: min(100% - 28px, 600px); }
+			.topbar { padding: 20px 0; }
+			.hero { display: block; padding: 44px 0 30px; }
+			.hero-note { margin-top: 30px; justify-self: auto; }
+			.panel-head { padding: 18px; }
+			.sets { padding: 4px 18px 8px; }
+			.lotto-row { grid-template-columns: 25px 1fr; gap: 10px; min-height: 79px; }
+			.row-label { grid-column: 2; margin-top: -19px; }
+			.balls { gap: 6px; }
+			.ball { width: clamp(34px, 11vw, 40px); font-size: 12px; }
+			.controls { align-items: stretch; flex-direction: column; padding: 18px; }
+			.draw-button { justify-content: center; }
+			.footer { padding-bottom: 22px; }
+		}
+	</style>
+</head>
+<body>
+	<div class="shell">
+		<header class="topbar">
+			<div class="brand"><span class="brand-mark">6</span><span>LUCKY SIX</span></div>
+			<button class="theme-toggle" id="themeToggle" type="button" aria-label="테마 전환"><span class="theme-icon" id="themeIcon">☼</span><span id="themeLabel">라이트 모드</span></button>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div>
+					<div class="eyebrow">WEEKLY NUMBER DRAW</div>
+					<h1>오늘의 행운을<br><em>골라보세요.</em></h1>
+					<p class="hero-copy">1부터 45까지, 균형 있게 섞인 5개의 번호 조합을 준비했습니다. 마음에 드는 조합을 가볍게 골라보세요.</p>
+				</div>
+				<div class="hero-note"><span>✦</span><div><strong>행운은 준비에서 시작돼요</strong>매번 새로운 조합으로 오늘의 숫자를 만나보세요.</div></div>
+			</section>
+
+			<section class="panel" aria-labelledby="resultsTitle">
+				<div class="panel-head"><h2 class="panel-title" id="resultsTitle">추천 번호 조합</h2><span class="panel-meta" id="drawTime">JUST NOW</span></div>
+				<div class="sets" id="sets" aria-live="polite"></div>
+				<div class="controls"><span class="controls-copy"><strong>총 5게임</strong> · 한 게임당 6개 번호</span><button class="draw-button" id="drawButton" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"/><path d="M3 21v-5h5"/></svg>새 번호 뽑기</button></div>
+			</section>
+		</main>
+
+		<footer class="footer"><span>LUCKY SIX / 2026</span><span>GOOD LUCK, HAVE FUN</span></footer>
+	</div>
+	<script>
+		const sets = document.querySelector('#sets');
+		const drawButton = document.querySelector('#drawButton');
+		const drawTime = document.querySelector('#drawTime');
+		const themeToggle = document.querySelector('#themeToggle');
+		const themeIcon = document.querySelector('#themeIcon');
+		const themeLabel = document.querySelector('#themeLabel');
+
+		function makeNumbers() {
+			const numbers = Array.from({ length: 45 }, (_, index) => index + 1);
+			for (let index = numbers.length - 1; index > 0; index -= 1) {
+				const swapIndex = Math.floor(Math.random() * (index + 1));
+				[numbers[index], numbers[swapIndex]] = [numbers[swapIndex], numbers[index]];
+			}
+			return numbers.slice(0, 6).sort((a, b) => a - b);
+		}
+
+		function renderSets() {
+			const combinations = Array.from({ length: 5 }, makeNumbers);
+			sets.innerHTML = combinations.map((numbers, rowIndex) => `
+				<div class="lotto-row">
+					<span class="row-number">0${rowIndex + 1}</span>
+					<div class="balls">${numbers.map((number, numberIndex) => `<span class="ball" style="animation-delay: ${numberIndex * 45}ms">${String(number).padStart(2, '0')}</span>`).join('')}</div>
+					<span class="row-label">LUCKY SET</span>
+				</div>`).join('');
+			drawTime.textContent = new Date().toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' });
+		}
+
+		function applyTheme(theme) {
+			document.documentElement.dataset.theme = theme;
+			const isDark = theme === 'dark';
+			themeIcon.textContent = isDark ? '☾' : '☼';
+			themeLabel.textContent = isDark ? '다크 모드' : '라이트 모드';
+			themeToggle.setAttribute('aria-label', isDark ? '라이트 모드로 전환' : '다크 모드로 전환');
+			document.querySelector('meta[name="theme-color"]').setAttribute('content', isDark ? '#171916' : '#f5f3ee');
+		}
+
+		drawButton.addEventListener('click', renderSets);
+		themeToggle.addEventListener('click', () => {
+			const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+			localStorage.setItem('lotto-theme', nextTheme);
+			applyTheme(nextTheme);
+		});
+
+		applyTheme(localStorage.getItem('lotto-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+		renderSets();
+	</script>
+</body>
+</html>
