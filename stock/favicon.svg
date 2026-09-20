@@ -1,46 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <!-- Glowing gradient from bear (copper) to bull (mint green) -->
-    <linearGradient id="bull-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#eeab98" /> <!-- Bear copper -->
-      <stop offset="50%" stop-color="#e7d394" /> <!-- Mixed gold -->
-      <stop offset="100%" stop-color="#b7efcb" /> <!-- Bull mint green -->
+    <!-- Vibrant Red-Pink Gradient for Plunge (급락) -->
+    <linearGradient id="red-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff416c" />
+      <stop offset="100%" stop-color="#ff4b2b" />
     </linearGradient>
+
+    <!-- Vibrant Green-Cyan Gradient for Surge (급등) -->
+    <linearGradient id="green-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60efff" />
+      <stop offset="100%" stop-color="#00ff87" />
+    </linearGradient>
+
+    <!-- Unified Trend Line Gradient -->
+    <linearGradient id="trend-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff416c" /> <!-- Pure neon red -->
+      <stop offset="45%" stop-color="#ff4b2b" />
+      <stop offset="55%" stop-color="#00ff87" /> <!-- Pure neon green -->
+      <stop offset="100%" stop-color="#60efff" />
+    </linearGradient>
+
+    <!-- High-intensity Glow Filter -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feGaussianBlur stdDeviation="14" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
-  <!-- Dark container matching app background -->
+  <!-- Dark trading-terminal background -->
   <rect width="512" height="512" rx="144" fill="#101716"/>
 
-  <!-- Subtle tech-grid pattern in the background -->
-  <path d="M64,0 V512 M128,0 V512 M192,0 V512 M256,0 V512 M320,0 V512 M384,0 V512 M448,0 V512" fill="none" stroke="#2a3531" stroke-width="1.5" stroke-opacity="0.3"/>
-  <path d="M0,64 H512 M0,128 H512 M0,192 H512 M0,256 H512 M0,320 H512 M0,384 H512 M0,448 H512" fill="none" stroke="#2a3531" stroke-width="1.5" stroke-opacity="0.3"/>
+  <!-- Subtle background trading grids -->
+  <path d="M64,0 V512 M128,0 V512 M192,0 V512 M256,0 V512 M320,0 V512 M384,0 V512 M448,0 V512" fill="none" stroke="#2a3531" stroke-width="1.5" stroke-opacity="0.25"/>
+  <path d="M0,64 H512 M0,128 H512 M0,192 H512 M0,256 H512 M0,320 H512 M0,384 H512 M0,448 H512" fill="none" stroke="#2a3531" stroke-width="1.5" stroke-opacity="0.25"/>
 
-  <!-- Inner glowing circular aura -->
-  <circle cx="256" cy="256" r="200" fill="none" stroke="url(#bull-grad)" stroke-width="2" stroke-opacity="0.15"/>
+  <!-- BACKROUND LAYER: Stylized Candlestick Charts (봉차트) with soft opacity -->
+  <!-- Red Candlestick (Left - Plunge) -->
+  <g opacity="0.35">
+    <line x1="140" y1="110" x2="140" y2="410" stroke="#ff416c" stroke-width="6" stroke-linecap="round" />
+    <rect x="112" y="170" width="56" height="190" rx="12" fill="url(#red-grad)" />
+  </g>
 
-  <!-- A highly stylized stock chart path: a beautiful, sweeping wave that rises confidently -->
-  <path d="M110,380
-           C160,380 180,280 230,290
-           C280,300 300,160 360,170
-           C400,175 410,130 430,120"
+  <!-- Green Candlestick (Right - Surge) -->
+  <g opacity="0.35">
+    <line x1="372" y1="70" x2="372" y2="450" stroke="#00ff87" stroke-width="6" stroke-linecap="round" />
+    <rect x="344" y="100" width="56" height="260" rx="12" fill="url(#green-grad)" />
+  </g>
+
+  <!-- FOREGROUND LAYER: The Dramatic V-shaped Crash & Breakout Surge Trend Line -->
+  <!-- Plunge & Surge main path with heavy glow -->
+  <path d="M60,160 L240,430 L440,90"
         fill="none"
-        stroke="url(#bull-grad)"
-        stroke-width="36"
+        stroke="url(#trend-grad)"
+        stroke-width="42"
         stroke-linecap="round"
         stroke-linejoin="round"
         filter="url(#glow)"/>
 
-  <!-- Glow dots representing data points / macro signals -->
-  <!-- Signal 1: Bear side -->
-  <circle cx="110" cy="380" r="16" fill="#eeab98" filter="url(#glow)"/>
-  <!-- Signal 2: Mixed center -->
-  <circle cx="230" cy="290" r="16" fill="#e7d394" filter="url(#glow)"/>
-  <!-- Signal 3: Bull peak -->
-  <circle cx="360" cy="170" r="16" fill="#b7efcb" filter="url(#glow)"/>
-  <!-- Endpoint arrow/dot -->
-  <circle cx="430" cy="120" r="10" fill="#ffffff"/>
+  <!-- High-contrast arrowhead indicating skyrocketing surge (급등) -->
+  <path d="M360,130 L440,90 L400,170 Z"
+        fill="#00ff87"
+        filter="url(#glow)"/>
+  <path d="M360,130 L440,90 L400,170 Z"
+        fill="#ffffff"/>
+
+  <!-- Interactive-looking highlight dots -->
+  <circle cx="240" cy="430" r="14" fill="#ffffff" filter="url(#glow)"/>
 </svg>
